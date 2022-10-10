@@ -23,3 +23,24 @@ function findlocation(arr, value) {
 }
 console.log(findlocation([11, 2, 3, 4, 5, 6, 7], 5));
 
+<======binarysearch dor sorted array---->
+
+function binarysearch(arr, value) {
+  let start = 0;
+  let end = arr.length - 1;
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+    if (arr[mid] == value) {
+      return mid;
+    }
+    if (arr[mid] > value) {
+      end = mid - 1;
+    }
+    if (arr[mid] < value) {
+      start = mid + 1;
+    }
+  }
+  return -1;
+}
+console.log(binarysearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 9));
+
