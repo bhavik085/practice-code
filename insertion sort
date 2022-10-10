@@ -9,3 +9,17 @@ function insertionsort(arr) {
   return arr;
 }
 console.log(insertionsort([22, 5, 6, 14, 9, 15]));
+
+<----finding the index of arr-->
+
+function findlocation(arr, value) {
+  let repeated = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == value) {
+      repeated.push({ [i]: arr[i] });
+    }
+  }
+  return repeated;
+}
+console.log(findlocation([11, 2, 3, 4, 5, 6, 7], 5));
+
